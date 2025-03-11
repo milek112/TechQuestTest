@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://6dgnd11drkeu"]
+
+[ext_resource type="Texture2D" uid="uid://db2s43u73g4hx" path="res://grafiki/Tiny Swords (Update 010)/Deco/09.png" id="1_rhxhb"]
+[ext_resource type="Script" path="res://sprite_2d.gd" id="3_b16y5"]
+[ext_resource type="PackedScene" uid="uid://bf56ts1rs72ik" path="res://gracz.tscn" id="3_k4li2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vr0tm"]
+radius = 19.0263
+
+[node name="drzewa" type="Node2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_vr0tm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_rhxhb")
+script = ExtResource("3_b16y5")
+
+[node name="gracz" parent="." instance=ExtResource("3_k4li2")]
